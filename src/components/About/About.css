@@ -1,0 +1,19 @@
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.about h2{
+    font-family: var(--theseasons);
+}
+.about p {
+    font-family: var(--poppins);
+    color: var(--blue);
+}
+
+.about .about-description {
+    color: black;
+}
+
+
+

@@ -1,10 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-import Main from './components/main';
+import About from './components/About';
+import Header from './components/Header';
+import Main from './components/Main';
 
 function App() {
   return (
-    <Main />
+    <>
+      <Header />
+      <Main />
+      <About />
+    </>
   );
 }
 

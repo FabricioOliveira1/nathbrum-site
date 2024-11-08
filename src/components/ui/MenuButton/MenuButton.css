@@ -1,0 +1,16 @@
+
+.menuButton {
+  background-color: var(--bg-dark);
+  border: none;
+}
+
+.menuButton svg {
+  fill: var(--white);
+  background-color: var(--blue);
+}
+
+@media (min-width: 1024px) {
+  .menuButton {
+      display: none;
+  }
+}
