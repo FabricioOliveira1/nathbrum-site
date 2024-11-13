@@ -1,18 +1,70 @@
 .about {
+    margin-block: 3rem;
     display: flex;
     flex-direction: column;
 }
 
 .about h2{
     font-family: var(--theseasons);
+    font-size: 32px;
 }
 .about p {
     font-family: var(--poppins);
     color: var(--blue);
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 3.25rem;
 }
 
-.about .about-description {
+.about .about-textDescription {
     color: black;
+    font-size: 24px;
+    line-height: 2rem;
+}
+
+.about img{
+    margin-inline: -2.5rem;
+}
+
+.about .about-descriptionTextContainer {
+    background-color: var(--white);
+    padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.about .about-descriptionButtonContainer {
+    background-color: var(--blue);
+    padding: 1rem;
+    color: var(--white);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.about .about-descriptionButtonContainer p {
+    color: var(--white);
+    font-size: 24px;
+    line-height: 2rem;
+}
+
+
+.about a {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: var(--poppins);
+    line-height: 1.5rem;
+    color: var(--blue);
+    text-decoration: none;
+    text-align: center;
+    width: 20rem;
+    background-color: var(--white);
+    margin: auto;
+    display: block;
+    padding: 1.5rem;
+    border-radius: 50px;
 }
 
 
