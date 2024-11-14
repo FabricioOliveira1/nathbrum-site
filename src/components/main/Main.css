@@ -1,0 +1,90 @@
+.main {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    
+    background-image: url('../../assets/main-background.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.main p {
+    line-height: 3.5rem;
+    text-align: center;
+}
+
+.main .main-title {
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--blue);
+}
+.main .main-title strong {
+    color: var(--text-black);
+    font-style: italic;
+}
+
+.main .main-text {
+    font-size: 32px;
+    line-height: 2rem;
+    font-family: var(--theseasons);
+    font-weight: 400;
+}
+
+.main .main-image {
+    width: 50px;
+}
+
+.main a {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    width: 20rem;
+    background-color: var(--blue);
+    font-family: var(--poppins);
+    margin: auto;
+    display: block;
+    padding: 1.5rem;
+    border-radius: 50px;
+}
+.main-cardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-inline: 2rem;
+    margin-top: -3rem;
+}
+
+
+.main-cardsContainer .card {
+    background-color: var(--light-gray);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+} 
+
+.main-cardsContainer .card img {
+    height: 128px;
+}
+
+.main-cardsContainer .card p {
+    line-height: 1.5rem;
+    font-family: var(--theseasons);
+    font-size: 24px;
+}
+.main-cardsContainer .card h3 {
+    text-align: center;
+    line-height: 1.75rem;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--blue);
+    font-family: var(--poppins);
+}

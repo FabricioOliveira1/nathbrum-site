@@ -1,14 +1,55 @@
+
+import Nav from '../Nav';
 import './Header.css'
+import OpenNav from '../OpenNav';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
-  return(
-    <section className='header'>
-      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30"
-            >
-            <path
-              d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z">
-            </path>
-          </svg>
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true)
+  const [headerHeight, setHeaderHeight] = useState('5rem') 
+
+  function handleMenuOpen() {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  let lastPosition = 0;
+  function isScrolling() {
+      const currentPosition = window.scrollY;
+      
+      if(isHeaderVisible && lastPosition < currentPosition) {
+        setIsHeaderVisible(false)
+    } else {
+      setIsHeaderVisible(true)
+    }
+    lastPosition = currentPosition
+  } 
+
+  useEffect(() => {
+    if (isMenuOpen){
+      setHeaderHeight('100vh')
+    } else {
+      setHeaderHeight('5rem')
+    }
+  },[isMenuOpen])
+    
+  useEffect(() => {
+    document.addEventListener('scroll', isScrolling);
+  },[])
+
+  useEffect(() => {
+    isHeaderVisible ? setHeaderHeight('5rem') : setHeaderHeight('0')
+    
+  },[isHeaderVisible]) 
+
+  return (
+    <section className="header" style={{'height' : `${headerHeight}`}}>
+      <div className='header-container' >
+        <Nav handleMenuOpen={handleMenuOpen} />
+      </div>
+      <OpenNav isMenuOpen={isMenuOpen} /> 
+      
     </section>
   )
 }
